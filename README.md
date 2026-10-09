@@ -1,7 +1,7 @@
 # Site vitrine « groupe d'EHPAD à l'ère de l'IA »
 
 Démonstrateur d'un **groupe d'EHPAD privé fictif (Groupe 00)** qui montre ce que l'IA change au siège et dans chaque résidence.
-Structure inspirée du site sitequarkley (organigramme interactif, calcul du temps rendu, quiz, École IA, espace direction), mais offre et marque distinctes.
+Le site présente un organigramme interactif avec calcul du temps rendu, un quiz, une École IA et un espace direction. Les règles du projet sont dans `CLAUDE.md`.
 
 ## Nom de marque provisoire
 
