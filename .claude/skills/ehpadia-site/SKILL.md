@@ -1,6 +1,6 @@
 ---
 name: ehpadia-site
-description: Gestionnaire du site vitrine IA pour les groupes d'EHPAD privés (dépôt GitHub jum33/ephad, groupe fictif « Groupe EHPADIA », marque EHPADIA). Couvre la charte verte, l'organigramme interactif et le calcul du temps rendu, les cas d'usage, le quiz des bons réflexes, l'École IA, l'espace direction, la page données de santé (HDS), les règles de formulation propres au secteur et le workflow de livraison (génération, vérification, commit, Netlify). À utiliser dès que Jean-Marc mentionne le site EHPAD, « ephad », EHPADIA (ou EPHADIA), le Groupe EHPADIA, EHPAD IA, un service ou un cas d'usage EHPAD à ajouter, ou toute modification de ce site, même formulée de façon informelle (« ajoute un cas d'usage sur les chutes », « change le nom de la marque », « mets à jour les chiffres de l'organigramme »). Ne pas utiliser pour le site Quarkley / SDIS 00, qui est un projet distinct.
+description: Gestionnaire du site vitrine IA pour les groupes d'EHPAD privés (dépôt GitHub jum33/ephad, groupe fictif « Groupe EHPADIA », marque EHPADIA). Couvre la charte arc-en-ciel, l'organigramme interactif et le calcul du temps rendu, les cas d'usage, le quiz des bons réflexes, l'École IA, l'espace direction, la page données de santé (HDS), les règles de formulation propres au secteur et le workflow de livraison (génération, vérification, commit, Netlify). À utiliser dès que Jean-Marc mentionne le site EHPAD, « ephad », EHPADIA (ou EPHADIA), le Groupe EHPADIA, EHPAD IA, un service ou un cas d'usage EHPAD à ajouter, ou toute modification de ce site, même formulée de façon informelle (« ajoute un cas d'usage sur les chutes », « change le nom de la marque », « mets à jour les chiffres de l'organigramme »). Ne pas utiliser pour le site Quarkley / SDIS 00, qui est un projet distinct.
 ---
 
 # Site du Groupe EHPADIA : l'IA pour les groupes d'EHPAD privés
@@ -12,8 +12,8 @@ Le site met en scène un **groupe d'EHPAD privé fictif, le Groupe EHPADIA** (12
 
 ## 1. Règles absolues
 
-1. **Projet distinct de Quarkley.** Ne jamais citer Quarkley, Superfasttt, SPIN, SDIS ou pompiers, ni reprendre un texte du site quarkley.com. Si la demande est ambiguë, demander de quel site il s'agit avant d'agir.
-2. **La marque n'est écrite qu'à un seul endroit** : `site.config.json`. Dans les pages, utiliser les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{GROUPE_SLOGAN}}`, `{{EMAIL}}`, `{{DOMAINE}}`, `{{EDITEUR_NOM}}`, `{{EDITEUR_ADRESSE}}`, `{{EDITEUR_SIRET}}`, `{{DIRECTEUR_PUBLICATION}}`.
+1. **Projet distinct de Quarkley.** Ne jamais citer Quarkley, Superfasttt, SPIN, SDIS ou pompiers, ni reprendre un texte du site quarkley.com. Si la demande est ambiguë, demander de quel site il s'agit avant d'agir. Seule exception : l'éditeur du site, **specialisteinternet.fr**, figure dans les mentions légales via `{{EDITEUR_NOM}}`, et nulle part ailleurs.
+2. **La marque n'est écrite qu'à un seul endroit** : `site.config.json`. Dans les pages, utiliser les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{GROUPE_SLOGAN}}`, `{{EMAIL}}`, `{{DOMAINE}}`, `{{EDITEUR_NOM}}`, `{{EDITEUR_ADRESSE}}`, `{{EDITEUR_SIRET}}`, `{{DIRECTEUR_PUBLICATION}}`, `{{HEBERGEUR}}` (hébergeur du site, OVH, distinct de l'hébergeur HDS des données de santé).
 3. Le sigle s'écrit **EHPAD**, jamais « EPHAD ». La marque s'écrit donc **EHPADIA**, y compris quand la demande dit « EPHADIA ». Le nom du dépôt, `ephad`, est historique et ne doit pas être recopié dans le contenu.
 4. **Tout est fictif** : personnages, résidences, chiffres. Toujours écrire « chiffres donnés à titre d'exemple ».
 5. Ne pas exposer l'e-mail personnel de Jean-Marc dans le site sans son accord explicite.
@@ -30,20 +30,24 @@ Le site met en scène un **groupe d'EHPAD privé fictif, le Groupe EHPADIA** (12
 - Vocabulaire : résidence, résident, famille, IDEC, médecin coordonnateur, AS / IDE, transmissions ciblées (DAR), PAP, CVS, évaluation HAS, événements indésirables (EI / EIG), CPOM, EPRD / ERRD, RAMA, GMP / PMP, Via Trajectoire, ARS, FALC, unité protégée.
 - Style : phrases courtes, concrètes, sans jargon technique d'IA. On écrit « le portail », « l'assistant », pas « LLM » ni « RAG ». Pas de point d'exclamation.
 
-## 3. Charte graphique (verte)
+## 3. Charte graphique (arc-en-ciel)
 
 | Jeton CSS | Valeur | Usage |
 |---|---|---|
-| `--green` | #1E6B4F | principale : boutons, chiffres, liens |
-| `--teal` | #1F7A8C | secondaire : icônes, offre, étapes « IA » |
-| `--amber` | #C77D14 | accent chaleureux, points « à explorer » |
-| `--cream` | #F7F4EC | fond de la « résidence type » |
-| `--soft` | #F1F6F2 | fonds doux |
+| `--ink` | #575756 | texte courant (gris) |
+| `--green` | #007F49 | principale : boutons, chiffres, liens |
+| `--teal` | #007C9C | secondaire : icônes, offre, étapes « IA » |
+| `--amber` | #F07E23 | secondaire orange, points « à explorer » ; en texte sur fond blanc, utiliser #B4590C |
+| `--pink` | #E5006D | filet arc-en-ciel seulement |
+| `--lime` | #96C11F | filet arc-en-ciel seulement |
+| `--cream` | #FEF3EA | fond de la « résidence type » |
+| `--soft` | #F1F1F1 | fonds doux |
 | `--danger` | #B83A2E | erreurs uniquement |
 
-- Polices : Geist et Geist Mono.
-- Icônes : SVG au trait de 1,7 px, couleurs alternées vert / bleu-vert / ambre, définies dans `ICONS` (`data.js`).
-- L'accueil utilise un dégradé vert, sans photo. Le logo `public/assets/logo.svg` (maison et feuille) est provisoire.
+- Sous un texte blanc, foncer le vert et le bleu d'un cran (par exemple #00663B pour le vert) pour garder le contraste.
+- Polices : Mulish pour tout le texte, Geist Mono pour les petites étiquettes.
+- Icônes : SVG au trait de 1,7 px, couleurs alternées vert / bleu / orange, définies dans `ICONS` (`data.js`).
+- L'accueil utilise un dégradé vert, sans photo, avec un filet arc-en-ciel (orange, rose, bleu, vert clair) au-dessus du titre. Le logo `public/assets/logo.svg` (maison et feuille) est provisoire.
 
 ## 4. Architecture
 

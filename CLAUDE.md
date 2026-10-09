@@ -6,6 +6,7 @@ Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés
 
 - Ce projet **n'a aucun lien** avec Quarkley, le site sitequarkley ou le SDIS 00. Les offres, la marque, la cible et la charte sont différentes.
 - On ne cite **jamais** Quarkley, Superfasttt, SPIN, les SDIS ou les pompiers, ni dans le site, ni dans les commits, ni dans la documentation. On ne reprend pas les textes du site Quarkley.
+- Seule exception : l'éditeur du site, **specialisteinternet.fr**, figure dans les mentions légales (jeton `{{EDITEUR_NOM}}`), et nulle part ailleurs dans le site. L'hébergeur du site (OVH, jeton `{{HEBERGEUR}}`) n'est pas l'hébergeur HDS des données de santé.
 - La structure (organigramme interactif, calcul du temps rendu, quiz, École IA, espace direction) a été reprise comme principe. Le contenu, lui, est propre au secteur des EHPAD.
 - Si une demande semble concerner le site Quarkley, demander à Jean-Marc de quel projet il s'agit avant de toucher à quoi que ce soit.
 
@@ -24,19 +25,24 @@ Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés
 - Vocabulaire du secteur : résidence, résident, famille, IDEC, médecin coordonnateur, AS / IDE, transmissions ciblées (DAR), PAP, CVS, évaluation HAS, CPOM, EPRD / ERRD, RAMA, GMP / PMP, Via Trajectoire, ARS, FALC.
 - Personnages et chiffres : tous **fictifs** et présentés comme des exemples (« chiffres donnés à titre d'exemple »).
 
-## Charte graphique (verte)
+## Charte graphique (arc-en-ciel)
 
 Les couleurs sont définies dans `public/assets/site.css` (`:root`) :
 
 | Jeton | Couleur | Usage |
 |---|---|---|
-| `--green` | #1E6B4F | Couleur principale : boutons, chiffres, liens |
-| `--teal` | #1F7A8C | Couleur secondaire : icônes, offre, étapes prises en charge par l'IA |
-| `--amber` | #C77D14 | Accent chaleureux : icônes, points « à explorer » |
-| `--cream` | #F7F4EC | Fond du bloc « résidence type » |
+| `--ink` | #575756 | Texte courant (gris) |
+| `--green` | #007F49 | Couleur principale : boutons, chiffres, liens |
+| `--teal` | #007C9C | Couleur secondaire : icônes, offre, étapes prises en charge par l'IA |
+| `--amber` | #F07E23 | Accent orange : icônes, points « à explorer » (texte orange sur fond blanc : #B4590C) |
+| `--pink` / `--lime` | #E5006D / #96C11F | Filet arc-en-ciel seulement |
+| `--cream` | #FEF3EA | Fond du bloc « résidence type » |
+| `--soft` | #F1F1F1 | Fonds doux |
 | `--danger` | #B83A2E | Erreurs seulement (quiz, formulaire) |
 
-Polices : Geist et Geist Mono (`public/fonts`). Les icônes sont des SVG au trait de 1,7 px, tous définis dans `data.js` (`ICONS`).
+Sous un texte blanc, le vert et le bleu sont foncés d'un cran (par exemple #00663B pour le vert) pour garder un contraste suffisant.
+
+Polices : Mulish pour tout le texte, Geist Mono pour les petites étiquettes (`public/fonts`). Les icônes sont des SVG au trait de 1,7 px, tous définis dans `data.js` (`ICONS`).
 
 ## Architecture
 

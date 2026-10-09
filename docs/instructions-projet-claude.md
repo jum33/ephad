@@ -7,7 +7,7 @@ Nom suggéré du projet : **Site EHPAD – Groupe EHPADIA**.
 
 Tu travailles sur le site vitrine d'une offre IA destinée aux **groupes d'EHPAD privés**. Le site est hébergé dans le dépôt GitHub `jum33/ephad`. Il met en scène un groupe fictif, le **Groupe EHPADIA** (12 résidences et un siège), pour montrer ce que l'IA change au siège et dans chaque résidence.
 
-**Ce projet est totalement distinct de Quarkley.** Ne mentionne jamais Quarkley, Superfasttt, SPIN, les SDIS ou les pompiers, et ne reprends aucun texte du site quarkley.com. Si une demande semble porter sur Quarkley, demande de quel projet il s'agit avant d'agir.
+**Ce projet est totalement distinct de Quarkley.** Ne mentionne jamais Quarkley, Superfasttt, SPIN, les SDIS ou les pompiers, et ne reprends aucun texte du site quarkley.com. Seule exception : l'éditeur du site, specialisteinternet.fr, apparaît dans les mentions légales. Si une demande semble porter sur Quarkley, demande de quel projet il s'agit avant d'agir.
 
 **Marque :** **EHPADIA**, définie uniquement dans `site.config.json` ; les pages utilisent les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{EMAIL}}`, etc., jamais le nom en dur. Le sigle s'écrit EHPAD, jamais « EPHAD », y compris dans la marque : EHPADIA, pas « EPHADIA ».
 
@@ -20,7 +20,7 @@ Tu travailles sur le site vitrine d'une offre IA destinée aux **groupes d'EHPAD
 - Utilise le vocabulaire du secteur : résidence, résidents, familles, IDEC, médecin coordonnateur, AS / IDE, transmissions ciblées (DAR), PAP, CVS, évaluation HAS, CPOM, EPRD / ERRD, RAMA, GMP / PMP, Via Trajectoire, ARS, FALC.
 - Les chiffres et les personnages sont fictifs, toujours présentés comme des exemples (« chiffres donnés à titre d'exemple »).
 
-**Charte :** verte. Principale #1E6B4F, secondaire #1F7A8C, accent ambre #C77D14, fond crème #F7F4EC, rouge #B83A2E réservé aux erreurs ; polices Geist et Geist Mono.
+**Charte :** arc-en-ciel. Texte gris #575756, vert principal #007F49, bleu #007C9C et orange #F07E23 en secondaires, rose #E5006D et vert clair #96C11F pour le seul filet arc-en-ciel, rouge #B83A2E réservé aux erreurs. Sous un texte blanc, le vert et le bleu sont foncés d'un cran. Police Mulish (Geist Mono pour les petites étiquettes).
 
 **Structure du site :** Accueil (chiffres clés, actualités) · Organigramme interactif (15 services, curseur de 1 à 60 résidences, calcul des heures rendues et des ETP) · Cas d'usage (20) · Le portail IA · Les bons réflexes (quiz) · École IA (formations) · Espace direction · Données de santé · Contact · Mentions légales.
 

@@ -16,7 +16,7 @@ Le domaine, l'e-mail de contact et les mentions de l'éditeur y sont aussi, avec
 | `src/partials/` | `head`, `header` et `footer` communs, insérés à la génération. |
 | `public/assets/data.js` | **Toutes les données** : services de l'organigramme (effectifs, fréquences, temps avant / après), cas d'usage, actualités. |
 | `public/assets/site.js` | Comportements : organigramme et calcul, quiz, filtres, École IA, formulaire. |
-| `public/assets/site.css` | Charte verte (`--green`, `--teal`, `--amber`). |
+| `public/assets/site.css` | Charte arc-en-ciel (`--green`, `--teal`, `--amber`, police Mulish). |
 | `build.mjs` | Génère `dist/` : remplace les jetons `{{…}}`, insère en-tête et pied de page, pré-calcule le contenu lisible sans JavaScript, produit le `sitemap.xml`. |
 
 ## Développer
