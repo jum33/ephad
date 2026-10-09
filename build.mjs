@@ -42,6 +42,7 @@ const gen = {
   <span class="who">${D.FAMILIES[c.f]}</span><h3>${c.t}</h3>
   <p class="desc">${c.d}</p>
   <p class="outcome">${c.o}</p>
+  <p class="guard"><b>Garde-fou :</b> ${c.gd}</p>
   <div class="pills"><span class="dur">${c.gain}</span><span>${c.who}</span></div>
 </article>`).join("\n"),
   "news": () => D.NEWS.map((n, i) => `<a class="nitem" id="news-${i}" href="/organigramme#service-${n.id}"><time>${n.d}</time><b>${n.t}</b><small>${n.s}</small><span class="more">Voir le service →</span></a>`).join("")

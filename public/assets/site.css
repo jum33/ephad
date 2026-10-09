@@ -493,6 +493,8 @@ footer.q-foot .q-note{margin-top:24px;font-size:.74rem;color:var(--q-muted)}
 /* cas d'usage */
 .case .desc{color:var(--muted);font-size:.9rem;line-height:1.6}
 .case .outcome{border-left:3px solid var(--green);padding-left:12px;font-weight:600;font-size:.9rem}
+.case .guard{display:block;color:var(--muted);font-size:.82rem;line-height:1.5}
+.case .guard b{color:var(--teal);font-weight:600}
 .case[hidden]{display:none!important}
 .cases-filter{display:flex;justify-content:center;margin-bottom:22px}
 
