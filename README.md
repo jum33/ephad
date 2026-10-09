@@ -1,11 +1,11 @@
 # Site vitrine « groupe d'EHPAD à l'ère de l'IA »
 
-Démonstrateur d'un **groupe d'EHPAD privé fictif (groupe EPHADIA)** qui montre ce que l'IA change au siège et dans chaque résidence.
+Démonstrateur d'un **groupe d'EHPAD privé fictif (Groupe EHPADIA)** qui montre ce que l'IA change au siège et dans chaque résidence.
 Le site présente un organigramme interactif avec calcul du temps rendu, un quiz, une École IA et un espace direction. Les règles du projet sont dans `CLAUDE.md`.
 
 ## Nom de marque provisoire
 
-La marque n'est pas encore choisie. Elle est définie **à un seul endroit** : `site.config.json` (clé `MARQUE`, valeur provisoire « EHPAD IA »).
+La marque, **EHPADIA**, est définie **à un seul endroit** : `site.config.json` (clé `MARQUE`).
 Le domaine, l'e-mail de contact et les mentions de l'éditeur y sont aussi, avec des valeurs à compléter.
 
 ## Arborescence

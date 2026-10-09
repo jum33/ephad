@@ -1,11 +1,11 @@
 ---
-name: ephadia-site
-description: Gestionnaire du site vitrine IA pour les groupes d'EHPAD privés (dépôt GitHub jum33/ephad, groupe fictif « groupe EPHADIA », marque provisoire « EHPAD IA »). Couvre la charte verte, l'organigramme interactif et le calcul du temps rendu, les cas d'usage, le quiz des bons réflexes, l'École IA, l'espace direction, la page données de santé (HDS), les règles de formulation propres au secteur et le workflow de livraison (génération, vérification, commit, Netlify). À utiliser dès que Jean-Marc mentionne le site EHPAD, « ephad », EPHADIA, le groupe EPHADIA, EHPAD IA, la marque EHPAD à trouver, un service ou un cas d'usage EHPAD à ajouter, ou toute modification de ce site, même formulée de façon informelle (« ajoute un cas d'usage sur les chutes », « change le nom de la marque », « mets à jour les chiffres de l'organigramme »). Ne pas utiliser pour le site Quarkley / SDIS 00, qui est un projet distinct.
+name: ehpadia-site
+description: Gestionnaire du site vitrine IA pour les groupes d'EHPAD privés (dépôt GitHub jum33/ephad, groupe fictif « Groupe EHPADIA », marque EHPADIA). Couvre la charte verte, l'organigramme interactif et le calcul du temps rendu, les cas d'usage, le quiz des bons réflexes, l'École IA, l'espace direction, la page données de santé (HDS), les règles de formulation propres au secteur et le workflow de livraison (génération, vérification, commit, Netlify). À utiliser dès que Jean-Marc mentionne le site EHPAD, « ephad », EHPADIA (ou EPHADIA), le Groupe EHPADIA, EHPAD IA, un service ou un cas d'usage EHPAD à ajouter, ou toute modification de ce site, même formulée de façon informelle (« ajoute un cas d'usage sur les chutes », « change le nom de la marque », « mets à jour les chiffres de l'organigramme »). Ne pas utiliser pour le site Quarkley / SDIS 00, qui est un projet distinct.
 ---
 
-# Site du groupe EPHADIA : l'IA pour les groupes d'EHPAD privés
+# Site du Groupe EHPADIA : l'IA pour les groupes d'EHPAD privés
 
-Le site met en scène un **groupe d'EHPAD privé fictif, le groupe EPHADIA** (12 résidences et un siège). On n'écrit plus « Groupe 00 ». Il montre ce que l'IA change dans chaque service et vend une offre (portail IA, formations, accompagnement) sous une marque **pas encore choisie**, dont le nom de travail est « EHPAD IA ».
+Le site met en scène un **groupe d'EHPAD privé fictif, le Groupe EHPADIA** (12 résidences et un siège). On n'écrit plus « Groupe 00 » ni « EHPAD IA ». Il montre ce que l'IA change dans chaque service et vend une offre (portail IA, formations, accompagnement) sous la marque **EHPADIA**.
 
 - Dépôt : `jum33/ephad`, branche `main`.
 - Hébergement : Netlify (`node build.mjs`, publication de `dist/`).
@@ -14,7 +14,7 @@ Le site met en scène un **groupe d'EHPAD privé fictif, le groupe EPHADIA** (12
 
 1. **Projet distinct de Quarkley.** Ne jamais citer Quarkley, Superfasttt, SPIN, SDIS ou pompiers, ni reprendre un texte du site quarkley.com. Si la demande est ambiguë, demander de quel site il s'agit avant d'agir.
 2. **La marque n'est écrite qu'à un seul endroit** : `site.config.json`. Dans les pages, utiliser les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{GROUPE_SLOGAN}}`, `{{EMAIL}}`, `{{DOMAINE}}`, `{{EDITEUR_NOM}}`, `{{EDITEUR_ADRESSE}}`, `{{EDITEUR_SIRET}}`, `{{DIRECTEUR_PUBLICATION}}`.
-3. Le sigle s'écrit **EHPAD**, jamais « EPHAD ». **EPHADIA** est un nom propre et garde cette orthographe. Le nom du dépôt, `ephad`, est historique et ne doit pas être recopié dans le contenu.
+3. Le sigle s'écrit **EHPAD**, jamais « EPHAD ». La marque s'écrit donc **EHPADIA**, y compris quand la demande dit « EPHADIA ». Le nom du dépôt, `ephad`, est historique et ne doit pas être recopié dans le contenu.
 4. **Tout est fictif** : personnages, résidences, chiffres. Toujours écrire « chiffres donnés à titre d'exemple ».
 5. Ne pas exposer l'e-mail personnel de Jean-Marc dans le site sans son accord explicite.
 
@@ -97,7 +97,7 @@ Champs d'une actualité : `{d: "date en toutes lettres", id: id du service lié,
 - **Ajouter une page** : créer `src/pages/nom.html` à partir d'une page existante (bloc meta, `<!--#head-->`, `<!--#header-->`, `<main id="contenu">`, `<!--#footer-->`), puis ajouter le lien dans `header.html` et/ou `footer.html`. URL sans `.html`.
 - **Ajouter une formation** : tableaux `F` (avec `pub` : `tous`, `referents`, `direction` ou `metiers`) ou `A` dans `site.js`.
 - **Changer la marque** : modifier `site.config.json`, régénérer, et vérifier qu'aucune page ne contient l'ancien nom (`grep -ri "ancien nom" dist`).
-- **Renommer le groupe fictif** : clé `GROUPE` du même fichier (valeur attendue : « groupe EPHADIA »).
+- **Renommer le groupe fictif** : clé `GROUPE` du même fichier (valeur actuelle : « Groupe EHPADIA »).
 
 ## 7. Vérifier avant de livrer
 

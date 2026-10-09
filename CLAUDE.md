@@ -1,6 +1,6 @@
-# Projet « groupe EPHADIA » : site vitrine IA pour les groupes d'EHPAD privés
+# Projet « Groupe EHPADIA » : site vitrine IA pour les groupes d'EHPAD privés
 
-Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés**. Le site met en scène un groupe fictif, le **groupe EPHADIA** (12 résidences et un siège), pour montrer ce que l'IA change dans chaque service.
+Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés**. Le site met en scène un groupe fictif, le **Groupe EHPADIA** (12 résidences et un siège), pour montrer ce que l'IA change dans chaque service.
 
 ## Règle n° 1 : projet distinct de Quarkley
 
@@ -11,9 +11,9 @@ Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés
 
 ## Marque
 
-- La marque **n'est pas encore choisie**. « EHPAD IA » est un nom de travail.
+- La marque est **EHPADIA** (elle remplace le nom de travail « EHPAD IA »).
 - Le nom de marque, le domaine, l'e-mail et les mentions de l'éditeur sont définis **uniquement** dans `site.config.json`. Ne jamais les écrire en dur dans une page : utiliser les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{EMAIL}}`, etc.
-- Le sigle s'écrit **EHPAD** (et non « EPHAD »). **EPHADIA** est un nom propre et garde son orthographe. On n'écrit plus « Groupe 00 ».
+- Le sigle s'écrit **EHPAD** (et non « EPHAD »). La marque s'écrit donc **EHPADIA** (et non « EPHADIA »). On n'écrit plus « Groupe 00 ».
 
 ## Cible et ton
 
