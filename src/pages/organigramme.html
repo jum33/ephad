@@ -1,0 +1,75 @@
+<!--meta title="L'organigramme IA du {{GROUPE}} – {{MARQUE}}" description="Cliquez sur un service du siège ou d'une résidence : ce que l'IA change, avant et après, heures rendues aux équipes selon la taille de votre groupe, et garde-fous." path="/organigramme"-->
+<!doctype html>
+<html lang="fr">
+<head>
+<!--#head-->
+</head>
+<body>
+<!--#header-->
+
+<main id="contenu">
+<div class="page on" id="p-groupe">
+  <div class="wrap phead">
+    <p class="crumb"><a href="/">Accueil</a> › Le {{GROUPE}}</p>
+    <h1>L'IA en renfort, du siège à chaque résidence</h1>
+    <p class="lede">Réglez la taille de votre groupe, puis cliquez sur un service de l'organigramme.</p>
+  </div>
+  <section id="org" style="padding-top:16px">
+    <div class="wrap">
+      <div class="controls">
+        <div class="sizer">
+          <p class="kicker">Taille de votre groupe</p>
+          <label for="res" style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><output id="res-out" for="res">12 résidences</output><small style="color:var(--muted)">Total possible : <b id="total-all"><!--@kpi-hours--> h</b> · <b id="etp-all"><!--@kpi-etp--> ETP</b></small></label>
+          <input type="range" id="res" min="1" max="60" step="1" value="12" aria-label="Nombre de résidences">
+          <div class="presets" id="presets" role="group" aria-label="Tailles types">
+            <button type="button" data-r="1">1 résidence</button>
+            <button type="button" data-r="5">5</button>
+            <button type="button" data-r="12" aria-pressed="true">12</button>
+            <button type="button" data-r="30">30</button>
+          </div>
+        </div>
+        <div class="counter" aria-live="polite">
+          <div><p class="n" id="total">0 h</p><small>rendues aux équipes chaque année</small></div>
+          <div><small id="explored">0 / <!--@services-count--> services explorés</small><div class="prog"><i id="progbar"></i></div></div>
+        </div>
+      </div>
+      <div class="org" id="orgchart"><p class="hint">L'organigramme interactif nécessite JavaScript. Le détail de chaque service est présenté plus bas.</p></div>
+      <p class="hint">● Les points orange marquent les services pas encore explorés. Chiffres donnés à titre d'exemple.</p>
+      <div id="donebox"></div>
+    </div>
+  </section>
+  <section style="padding-top:0" id="services">
+    <div class="wrap">
+      <div class="head"><p class="kicker">Service par service</p><h2>Les <!--@services-count--> services en détail</h2></div>
+      <p class="center-note" style="margin:-8px 0 20px">Pour chaque service : la tâche, ce que l'IA prend en charge, un exemple et le garde-fou. Heures rendues pour un groupe de 12 résidences, chiffres donnés à titre d'exemple.</p>
+      <div class="gdets"><!--@services-details--></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<!--#footer-->
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" aria-hidden="true">
+  <div class="dtop"><span class="kicker" id="d-group"></span><button class="x" id="d-close" type="button" aria-label="Fermer">×</button></div>
+  <div class="who"><div class="ic" id="d-ic"></div><div><h3 id="d-title"></h3><small id="d-person"></small></div></div>
+  <div class="hero-num">
+    <div><p class="n" id="d-hours"></p><small>rendues chaque année à ce service</small></div>
+    <div style="text-align:right"><span class="pill" id="d-staff"></span><p class="ex" style="margin-top:6px">exemple</p></div>
+  </div>
+  <div class="ba">
+    <div class="ba-h"><span class="state" id="d-state">Avant</span><span class="t" id="d-time"></span></div>
+    <ol id="d-steps"></ol>
+    <div class="toggle"><button type="button" id="t-before">Avant</button><button type="button" id="t-after">Avec l'IA</button></div>
+  </div>
+  <div>
+    <p class="kicker" style="margin-bottom:8px" id="d-task"></p>
+    <div class="chat" id="chat" aria-live="polite"></div>
+  </div>
+  <p class="guard"><b>Garde-fou</b><span id="d-guard"></span></p>
+  <a class="toecole" href="/ecole-ia">Les formations associées à l'École IA →</a>
+  <div class="next"><button type="button" id="d-prev">← Précédent</button><button type="button" class="go" id="d-next">Service suivant →</button></div>
+</aside>
+</body>
+</html>

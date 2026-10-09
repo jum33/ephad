@@ -1,0 +1,53 @@
+<!--meta title="Demander une démo du portail IA pour votre groupe d'EHPAD – {{MARQUE}}" description="45 minutes dans le {{GROUPE}}, sur les services et les formations qui vous intéressent." path="/contact"-->
+<!doctype html>
+<html lang="fr">
+<head>
+<!--#head-->
+</head>
+<body>
+<!--#header-->
+
+<main id="contenu">
+<div class="page on" id="p-contact">
+  <div class="wrap phead">
+    <p class="crumb"><a href="/">Accueil</a> › Contact</p>
+    <h1>Demander une démo</h1>
+    <p class="lede">45 minutes dans le {{GROUPE}}, sur les services et les formations qui vous intéressent.</p>
+  </div>
+  <section style="padding-top:16px">
+    <div class="wrap cgrid">
+      <form class="cform" id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="prestations" id="f-prest">
+        <p hidden><label>Ne pas remplir : <input name="bot-field"></label></p>
+        <label>Nom<input name="nom" type="text" autocomplete="name" required></label>
+        <label>Fonction<select name="fonction"><option>Direction générale</option><option>Direction des opérations / régionale</option><option>Direction de résidence</option><option>Qualité</option><option>Ressources humaines</option><option>DSI / RSSI</option><option>DPO</option><option>Autre</option></select></label>
+        <label>Groupe ou établissement<input name="groupe" type="text" placeholder="ex. Groupe Les Tilleuls"></label>
+        <label>Nombre de résidences<input name="residences" type="number" min="1" inputmode="numeric"></label>
+        <label>E-mail professionnel<input name="email" type="email" autocomplete="email" required></label>
+        <label>Téléphone (facultatif)<input name="telephone" type="tel" autocomplete="tel"></label>
+        <div class="full"><p style="font-size:.82rem;font-weight:500;margin-bottom:6px">Formations et prestations sélectionnées</p><div class="chips" id="chips"></div></div>
+        <label class="full">Message (facultatif)<textarea name="message" placeholder="Services à montrer en priorité, contraintes, calendrier…"></textarea></label>
+        <div class="full"><button class="btn" type="submit">Envoyer ma demande</button></div>
+        <p class="okc full" id="ok" hidden>Merci, votre demande est bien envoyée. Nous vous répondons rapidement par e-mail.</p>
+        <p class="okc full" id="ko" hidden style="color:var(--danger)">L'envoi a échoué. Écrivez-nous directement à {{EMAIL}}.</p>
+        <p class="rgpd full">Les informations saisies sont utilisées par {{MARQUE}} uniquement pour répondre à votre demande et organiser la démonstration (article 6-1-b du RGPD). Elles sont conservées douze mois au plus après le dernier échange. Vous pouvez exercer vos droits d'accès, de rectification, d'effacement, de limitation et d'opposition à {{EMAIL}}. <a href="/mentions-legales">En savoir plus</a>.</p>
+      </form>
+      <div class="cside">
+        <div class="card pcard">
+          <p class="kicker">Contact direct</p>
+          <div class="mail"><code id="mail">{{EMAIL}}</code><button class="copy" id="copy" type="button">Copier</button></div>
+        </div>
+        <div class="card pcard">
+          <p class="kicker">Éditeur</p>
+          <p style="font-size:.9rem">{{EDITEUR_NOM}}<br>{{EDITEUR_ADRESSE}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<!--#footer-->
+</body>
+</html>
