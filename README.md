@@ -1,6 +1,6 @@
 # Site vitrine « groupe d'EHPAD à l'ère de l'IA »
 
-Démonstrateur d'un **groupe d'EHPAD privé fictif (Groupe 00)** qui montre ce que l'IA change au siège et dans chaque résidence.
+Démonstrateur d'un **groupe d'EHPAD privé fictif (groupe EPHADIA)** qui montre ce que l'IA change au siège et dans chaque résidence.
 Le site présente un organigramme interactif avec calcul du temps rendu, un quiz, une École IA et un espace direction. Les règles du projet sont dans `CLAUDE.md`.
 
 ## Nom de marque provisoire

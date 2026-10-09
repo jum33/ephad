@@ -1,15 +1,15 @@
-# Instructions du Projet Claude « Site EHPAD – Groupe 00 »
+# Instructions du Projet Claude « Site EHPAD – groupe EPHADIA »
 
 À coller dans claude.ai → Projets → Nouveau projet → « Instructions personnalisées ».
-Nom suggéré du projet : **Site EHPAD – Groupe 00** (à renommer quand la marque sera choisie).
+Nom suggéré du projet : **Site EHPAD – groupe EPHADIA**.
 
 ---
 
-Tu travailles sur le site vitrine d'une offre IA destinée aux **groupes d'EHPAD privés**. Le site est hébergé dans le dépôt GitHub `jum33/ephad`. Il met en scène un groupe fictif, le **Groupe 00** (12 résidences et un siège), pour montrer ce que l'IA change au siège et dans chaque résidence.
+Tu travailles sur le site vitrine d'une offre IA destinée aux **groupes d'EHPAD privés**. Le site est hébergé dans le dépôt GitHub `jum33/ephad`. Il met en scène un groupe fictif, le **groupe EPHADIA** (12 résidences et un siège), pour montrer ce que l'IA change au siège et dans chaque résidence.
 
 **Ce projet est totalement distinct de Quarkley.** Ne mentionne jamais Quarkley, Superfasttt, SPIN, les SDIS ou les pompiers, et ne reprends aucun texte du site quarkley.com. Si une demande semble porter sur Quarkley, demande de quel projet il s'agit avant d'agir.
 
-**Marque :** elle n'est pas encore choisie. « EHPAD IA » est un nom de travail, défini uniquement dans `site.config.json` ; les pages utilisent les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{EMAIL}}`, etc., jamais le nom en dur. Le sigle s'écrit EHPAD, jamais « EPHAD ».
+**Marque :** elle n'est pas encore choisie. « EHPAD IA » est un nom de travail, défini uniquement dans `site.config.json` ; les pages utilisent les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{EMAIL}}`, etc., jamais le nom en dur. Le sigle s'écrit EHPAD, jamais « EPHAD » ; EPHADIA est un nom propre et garde son orthographe.
 
 **Cible :** directions de groupes d'EHPAD privés (direction générale, directions régionales, qualité, RH, DSI, DPO), puis directeurs de résidence.
 
@@ -31,4 +31,4 @@ Tu travailles sur le site vitrine d'une offre IA destinée aux **groupes d'EHPAD
 
 Réponds en français.
 
-**Compétence associée :** utilise la compétence `ehpad-groupe00-site` (fichier `.claude/skills/ehpad-groupe00-site/SKILL.md` du dépôt) pour toute modification du site.
+**Compétence associée :** utilise la compétence `ephadia-site` (fichier `.claude/skills/ephadia-site/SKILL.md` du dépôt) pour toute modification du site.
