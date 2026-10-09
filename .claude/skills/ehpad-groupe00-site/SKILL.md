@@ -70,7 +70,13 @@ L'effectif dépend de `sc` et du nombre de résidences `R` (curseur de 1 à 60, 
 - `siege` → `max(1, round(n × R / 12))` ;
 - `site` → `n × R`.
 
-Repère pour 12 résidences : environ **10 000 h et 6,3 ETP**. Après toute modification de `SERVICES`, vérifier que les ordres de grandeur restent crédibles : ni un seul service qui écrase les autres, ni un total supérieur à environ 15 ETP pour 12 résidences.
+Repère pour 12 résidences : environ **10 000 h et 6,3 ETP**, dont environ 3 600 h pour le service Soins (le plus lourd, car il compte le plus d'effectif par résidence). Après toute modification de `SERVICES`, vérifier que les ordres de grandeur restent crédibles : aucun service au-delà d'environ 40 % du total, et un total qui ne dépasse pas environ 15 ETP pour 12 résidences.
+
+Pour obtenir ces chiffres sans navigateur :
+
+```bash
+node -e 'global.window={};require("./public/assets/data.js");const D=window.DATA;const h=D.totalHours(12);console.log(Math.round(h),"h",D.etp(h),"ETP")'
+```
 
 Champs d'un service :
 
@@ -81,7 +87,9 @@ Champs d'un service :
  q:"Exemple de demande", a:"Réponse (HTML court, <ul> permis)", src:"Source citée", gd:"Garde-fou"}
 ```
 
-Champs d'un cas d'usage : `{id, f: clé de FAMILIES, t, d, o (bénéfice), gain, who}`.
+Champs d'un cas d'usage : `{id, f: clé de FAMILIES, t, d, o (bénéfice), gain, who}`. Familles : `pilotage`, `soins`, `vie`, `rh`, `qualite`, `relation`.
+
+Champs d'une actualité : `{d: "date en toutes lettres", id: id du service lié, t: titre, s: phrase de résumé}`.
 
 ## 6. Procédures
 
@@ -100,6 +108,7 @@ Champs d'un cas d'usage : `{id, f: clé de FAMILIES, t, d, o (bénéfice), gain,
 
 ## 8. Livraison
 
+- Le fichier `CLAUDE.md` du dépôt fait foi : en cas d'écart avec cette compétence, suivre `CLAUDE.md` et signaler l'écart.
 - Commit en français, court et descriptif, poussé sur `jum33/ephad`. Créer une branche et une pull request quand Jean-Marc veut relire avant publication, sinon pousser sur `main` s'il le demande.
 - Ne jamais versionner `dist/`.
 - Netlify redéploie automatiquement après chaque push sur `main`.
