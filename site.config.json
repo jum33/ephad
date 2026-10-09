@@ -1,6 +1,6 @@
 {
   "_note": "Nom de marque provisoire : le changer ici, puis lancer `node build.mjs`. Toutes les pages sont régénérées.",
-  "MARQUE": "EHPAD IA",
+  "MARQUE": "EHPADIA",
   "DOMAINE": "https://www.exemple-ehpad-ia.fr",
   "EMAIL": "contact@exemple-ehpad-ia.fr",
   "EDITEUR_NOM": "[Raison sociale à compléter]",
@@ -8,6 +8,6 @@
   "EDITEUR_SIRET": "[SIRET à compléter]",
   "DIRECTEUR_PUBLICATION": "[Nom à compléter]",
   "HEBERGEUR": "[Hébergeur du site à compléter : raison sociale, adresse, téléphone]",
-  "GROUPE": "Groupe 00",
+  "GROUPE": "Groupe EHPADIA",
   "GROUPE_SLOGAN": "Le groupe d'EHPAD à l'ère de l'IA"
 }
