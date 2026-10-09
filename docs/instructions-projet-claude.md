@@ -30,3 +30,5 @@ Tu travailles sur le site vitrine d'une offre IA destinée aux **groupes d'EHPAD
 - Les règles détaillées sont dans le fichier `CLAUDE.md` du dépôt.
 
 Réponds en français.
+
+**Compétence associée :** utilise la compétence `ehpad-groupe00-site` (fichier `.claude/skills/ehpad-groupe00-site/SKILL.md` du dépôt) pour toute modification du site.
