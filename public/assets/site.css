@@ -1,16 +1,17 @@
-/* Charte verte du site de démonstration : en-tête, pied de page et pages.
-   Couleurs : --green (principale), --teal (secondaire), --amber (accent chaleureux). */
+/* Charte « arc-en-ciel » du site de démonstration : en-tête, pied de page et pages.
+   Couleurs : --green (principale), --teal (secondaire), --amber (accent chaleureux),
+   --pink et --lime (filet arc-en-ciel seulement). Police : Mulish. */
    les règles génériques header / nav / footer des anciens gabarits. */
-@font-face{font-family:"Geist";src:url("/fonts/Geist-Variable.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Mulish";src:url("/fonts/Mulish-Variable.woff2") format("woff2");font-weight:200 1000;font-display:swap}
 @font-face{font-family:"Geist Mono";src:url("/fonts/GeistMono-Variable.woff2") format("woff2");font-weight:100 900;font-display:swap}
 
-body{font-family:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif}
+body{font-family:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif}
 
 .q-strip,header.q-top,footer.q-foot{
-  --q-ink:#16201B; --q-muted:#5C6862; --q-line:#DCE5DF; --q-soft:#F1F6F2;
-  --q-green:#1E6B4F; --q-teal:#1F7A8C;
+  --q-ink:#575756; --q-muted:#6F6F6E; --q-line:#E5E5E5; --q-soft:#F1F1F1;
+  --q-green:#007F49; --q-teal:#007C9C;
   --q-mono:"Geist Mono",ui-monospace,Menlo,monospace;
-  font-family:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-family:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif;
   line-height:1.5; box-sizing:border-box;
 }
 .q-strip *,header.q-top *,footer.q-foot *{box-sizing:border-box}
@@ -68,9 +69,9 @@ footer.q-foot a:hover{text-decoration:underline}
 footer.q-foot p{margin:0}
 @media (max-width:640px){footer.q-foot .q-cols{grid-template-columns:1fr}}
 :root{
-  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#16201B; --muted:#5C6862; --line:#DCE5DF; --danger:#B83A2E;
-  --green:#1E6B4F; --teal:#1F7A8C; --amber:#C77D14; --stage:#FFFFFF; --stage-ink:#16201B; --soft:#F1F6F2; --cream:#F7F4EC; color-scheme:light;
-  --sans:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#575756; --muted:#6F6F6E; --line:#E5E5E5; --danger:#B83A2E;
+  --green:#007F49; --teal:#007C9C; --amber:#F07E23; --pink:#E5006D; --lime:#96C11F; --stage:#FFFFFF; --stage-ink:#575756; --soft:#F1F1F1; --cream:#FEF3EA; color-scheme:light;
+  --sans:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"Geist Mono",ui-monospace,Menlo,monospace;
 }
 
@@ -92,10 +93,10 @@ section{padding-block:clamp(28px,4vw,48px)}
 
 /* HERO */
 .hero{background:var(--stage);color:var(--stage-ink);border-bottom:1px solid var(--line)}
-#p-accueil .hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(199,125,20,.28),transparent 60%),radial-gradient(900px 500px at 0% 110%,rgba(31,122,140,.45),transparent 60%),linear-gradient(160deg,#1E6B4F,#174F3B);color:#fff;border-bottom:0}
+#p-accueil .hero{background:radial-gradient(1200px 500px at 85% -10%,rgba(240,126,35,.30),transparent 60%),radial-gradient(900px 500px at 0% 110%,rgba(0,143,178,.55),transparent 60%),linear-gradient(160deg,#007F49,#00663B);color:#fff;border-bottom:0}
 #p-accueil .hero h1{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 #p-accueil .hero .tag{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.4)}
-#p-accueil .hero .tag::before{content:"";display:block;width:48px;height:3px;background:var(--amber);margin:0 auto 14px;border-radius:2px}
+#p-accueil .hero .tag::before{content:"";display:block;width:96px;height:4px;background:linear-gradient(90deg,var(--amber) 0 25%,var(--pink) 25% 50%,#008FB2 50% 75%,var(--lime) 75%);margin:0 auto 14px;border-radius:2px}
 .hero .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:16px;font-size:.82rem}
 .demo-pill{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;padding:5px 10px;border-radius:999px;background:var(--soft);color:var(--muted)}
 .logo-sm{width:64px;height:auto;display:block}
@@ -154,7 +155,7 @@ section{padding-block:clamp(28px,4vw,48px)}
 @media (max-width:760px){.direction{grid-template-columns:1fr}.poles{grid-template-columns:1fr}}
 .hint{text-align:center;margin-top:18px;font-size:.84rem;color:var(--muted)}
 .done-msg{margin:24px auto 0;max-width:640px;text-align:center;background:var(--ink);color:var(--bg);border-radius:18px;padding:20px 24px;animation:pop .4s ease}
-.done-msg b{color:var(--amber)}
+.done-msg b{color:#FFC896}
 
 /* DRAWER */
 .scrim{position:fixed;inset:0;background:rgba(12,24,18,.45);opacity:0;pointer-events:none;transition:opacity .25s;z-index:200}
@@ -173,7 +174,7 @@ section{padding-block:clamp(28px,4vw,48px)}
 .hero-num .n{font-size:2.8rem;font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--green);font-variant-numeric:tabular-nums}
 .hero-num small{color:var(--muted);font-size:.8rem;display:block}
 .pill{font-family:var(--mono);font-size:.7rem;padding:4px 9px;border-radius:99px;background:var(--surface);border:1px solid var(--line);white-space:nowrap}
-.ex{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--amber);text-transform:uppercase}
+.ex{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:#B4590C;text-transform:uppercase}
 
 .ba{border:1px solid var(--line);border-radius:18px;padding:16px 18px}
 .ba-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
@@ -259,9 +260,9 @@ footer .legal p{line-height:1.55}
 .phead .lede{color:var(--muted);max-width:56ch}
 .crumb{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .crumb a{color:inherit;text-decoration:none}
-.offer-band{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;background:#E5F1F2;color:var(--teal);font-size:.8rem;padding:9px 16px;text-align:center}
+.offer-band{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;background:#E0F1F6;color:var(--teal);font-size:.8rem;padding:9px 16px;text-align:center}
 .offer-band b{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em}
-.tag-offer{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--teal);background:#E5F1F2;border-radius:99px;padding:2px 8px;text-transform:uppercase}
+.tag-offer{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--teal);background:#E0F1F6;border-radius:99px;padding:2px 8px;text-transform:uppercase}
 
 /* HOME */
 .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -358,8 +359,8 @@ footer .legal p{line-height:1.55}
 .cform textarea{min-height:110px;resize:vertical}
 @media (max-width:560px){.cform{grid-template-columns:1fr}}
 .chips{display:flex;gap:6px;flex-wrap:wrap;min-height:34px;align-items:center}
-.chip{display:inline-flex;align-items:center;gap:6px;background:#E5F1F2;color:var(--teal);border-radius:99px;padding:5px 6px 5px 12px;font-size:.8rem}
-.chip button{border:0;background:rgba(31,122,140,.14);color:var(--teal);border-radius:50%;width:20px;height:20px;cursor:pointer;line-height:1}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#E0F1F6;color:var(--teal);border-radius:99px;padding:5px 6px 5px 12px;font-size:.8rem}
+.chip button{border:0;background:rgba(0,124,156,.14);color:var(--teal);border-radius:50%;width:20px;height:20px;cursor:pointer;line-height:1}
 .chips .empty{color:var(--muted);font-size:.82rem}
 .chips .empty a{color:var(--teal)}
 .rgpd{font-size:.72rem;color:var(--muted);line-height:1.5}
@@ -484,7 +485,7 @@ footer.q-foot .q-note{margin-top:24px;font-size:.74rem;color:var(--q-muted)}
 /* organigramme : siège sur 3 colonnes, résidence type encadrée en crème */
 .siege{grid-template-columns:repeat(3,1fr);max-width:1000px}
 .siege > .kicker,.residence > .kicker{grid-column:1/-1}
-.residence{background:var(--cream);border-style:solid;border-color:#E8E1D0;grid-template-columns:repeat(4,1fr)}
+.residence{background:var(--cream);border-style:solid;border-color:#F9DCC3;grid-template-columns:repeat(4,1fr)}
 .residence .rnote{grid-column:1/-1;text-align:center;font-size:.78rem;color:var(--muted);margin-top:-4px}
 @media (max-width:980px){.residence{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:760px){.siege,.residence{grid-template-columns:1fr}}
