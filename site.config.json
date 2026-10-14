@@ -1,7 +1,7 @@
 {
   "_note": "Nom de marque provisoire : le changer ici, puis lancer `node build.mjs`. Toutes les pages sont régénérées.",
   "MARQUE": "EHPADIA",
-  "DOMAINE": "https://www.ehpadia.fr",
+  "DOMAINE": "https://www.ephadia.fr",
   "EMAIL": "jmu@specialisteinternet.fr",
   "EDITEUR_NOM": "specialisteinternet.fr",
   "EDITEUR_ADRESSE": "[Adresse à compléter]",
