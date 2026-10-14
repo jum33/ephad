@@ -19,6 +19,8 @@ foreach ($lignes as $k => $v) { $corps .= "$k : " . ($v === '' ? '-' : $v) . "\n
 
 $a = '{{EMAIL}}';
 $sujet = '=?UTF-8?B?' . base64_encode('Demande de démo {{MARQUE}} : ' . $lignes['Nom']) . '?=';
-$entetes = "From: $a\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8bit";
+// l'expéditeur doit être sur le domaine du site, sinon OVH ou le destinataire peuvent rejeter le message
+$de = 'no-reply@' . preg_replace('/^www\./', '', parse_url('{{DOMAINE}}', PHP_URL_HOST));
+$entetes = "From: {{MARQUE}} <$de>\r\nReply-To: $email\r\nContent-Type: text/plain; charset=utf-8\r\nContent-Transfer-Encoding: 8bit";
 if (!mail($a, $sujet, $corps, $entetes)) { http_response_code(500); exit('Envoi impossible.'); }
 echo 'ok';

@@ -1,8 +1,8 @@
 {
   "_note": "Nom de marque provisoire : le changer ici, puis lancer `node build.mjs`. Toutes les pages sont régénérées.",
   "MARQUE": "EHPADIA",
-  "DOMAINE": "https://www.exemple-ehpad-ia.fr",
-  "EMAIL": "contact@exemple-ehpad-ia.fr",
+  "DOMAINE": "https://www.ehpadia.fr",
+  "EMAIL": "jmu@specialisteinternet.fr",
   "EDITEUR_NOM": "specialisteinternet.fr",
   "EDITEUR_ADRESSE": "[Adresse à compléter]",
   "EDITEUR_SIRET": "[SIRET à compléter]",
