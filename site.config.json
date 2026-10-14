@@ -1,6 +1,6 @@
 {
   "_note": "Nom de marque provisoire : le changer ici, puis lancer `node build.mjs`. Toutes les pages sont régénérées.",
-  "MARQUE": "EHPADIA",
+  "MARQUE": "EPHADIA",
   "DOMAINE": "https://www.ephadia.fr",
   "EMAIL": "jmu@specialisteinternet.fr",
   "EDITEUR_NOM": "specialisteinternet.fr",
@@ -8,6 +8,6 @@
   "EDITEUR_SIRET": "[SIRET à compléter]",
   "DIRECTEUR_PUBLICATION": "[Nom à compléter]",
   "HEBERGEUR": "OVH SAS, 2 rue Kellermann, 59100 Roubaix, France. Téléphone : +33 9 72 10 10 07.",
-  "GROUPE": "Groupe EHPADIA",
+  "GROUPE": "Groupe EPHADIA",
   "GROUPE_SLOGAN": "Le groupe d'EHPAD à l'ère de l'IA"
 }
