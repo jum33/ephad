@@ -1,0 +1,35 @@
+# Publie le site sur l'hébergement OVH à chaque mise à jour de main.
+# Secrets à créer dans GitHub (Settings > Secrets and variables > Actions) :
+#   OVH_FTP_SERVER   ex. ftp.cluster0XX.hosting.ovh.net
+#   OVH_FTP_USER     identifiant FTP principal de l'hébergement
+#   OVH_FTP_PASSWORD mot de passe FTP
+name: Publication OVH
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-ovh
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Génération du site
+        run: node build.mjs
+      - name: Envoi sur OVH par FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.OVH_FTP_SERVER }}
+          username: ${{ secrets.OVH_FTP_USER }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ./www/

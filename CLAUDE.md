@@ -63,4 +63,4 @@ Calcul du temps rendu, pour chaque service : `effectif × occurrences par an × 
 
 ## Déploiement
 
-Netlify : `netlify.toml` lance `node build.mjs` et publie `dist/`. Le formulaire de contact passe par Netlify Forms (`name="contact"`). Ne jamais versionner `dist/`.
+OVH (hébergement mutualisé Apache), le nom de domaine restant chez un autre registrar. Chaque mise à jour de `main` lance l'action GitHub `.github/workflows/deploy-ovh.yml` : elle exécute `node build.mjs` et envoie le contenu de `dist/` dans le dossier `www/` par FTP. Les identifiants FTP sont dans les secrets du dépôt (`OVH_FTP_SERVER`, `OVH_FTP_USER`, `OVH_FTP_PASSWORD`). `.htaccess` sert les URL sans `.html`, la page 404 et force le HTTPS. Le formulaire de contact passe par `contact.php`, qui envoie la demande à `{{EMAIL}}` avec la fonction `mail()` d'OVH. Ne jamais versionner `dist/`.
