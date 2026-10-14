@@ -1,22 +1,22 @@
 ---
-name: ehpadia-site
-description: Gestionnaire du site vitrine IA pour les groupes d'EHPAD privés (dépôt GitHub jum33/ephad, groupe fictif « Groupe EHPADIA », marque EHPADIA). Couvre la charte arc-en-ciel, l'organigramme interactif et le calcul du temps rendu, les cas d'usage, le quiz des bons réflexes, l'École IA, l'espace direction, la page données de santé (HDS), les règles de formulation propres au secteur et le workflow de livraison (génération, vérification, commit, Netlify). À utiliser dès que Jean-Marc mentionne le site EHPAD, « ephad », EHPADIA (ou EPHADIA), le Groupe EHPADIA, EHPAD IA, un service ou un cas d'usage EHPAD à ajouter, ou toute modification de ce site, même formulée de façon informelle (« ajoute un cas d'usage sur les chutes », « change le nom de la marque », « mets à jour les chiffres de l'organigramme »). Ne pas utiliser pour le site Quarkley / SDIS 00, qui est un projet distinct.
+name: ephadia-site
+description: Gestionnaire du site vitrine IA pour les groupes d'EHPAD privés (dépôt GitHub jum33/ephad, groupe fictif « Groupe EPHADIA », marque EPHADIA, domaine ephadia.fr). Couvre la charte arc-en-ciel, l'organigramme interactif et le calcul du temps rendu, les cas d'usage, le quiz des bons réflexes, l'École IA, l'espace direction, la page données de santé (HDS), les règles de formulation propres au secteur et le workflow de livraison (génération, vérification, commit, publication OVH). À utiliser dès que Jean-Marc mentionne le site EHPAD, « ephad », EPHADIA (ou EHPADIA), ephadia.fr, le Groupe EPHADIA, EHPAD IA, un service ou un cas d'usage EHPAD à ajouter, ou toute modification de ce site, même formulée de façon informelle (« ajoute un cas d'usage sur les chutes », « change le nom de la marque », « mets à jour les chiffres de l'organigramme »). Ne pas utiliser pour le site Quarkley / SDIS 00, qui est un projet distinct.
 ---
 
-# Site du Groupe EHPADIA : l'IA pour les groupes d'EHPAD privés
+# Site du Groupe EPHADIA : l'IA pour les groupes d'EHPAD privés
 
-Le site met en scène un **groupe d'EHPAD privé fictif, le Groupe EHPADIA** (12 résidences et un siège). On n'écrit plus « Groupe 00 » ni « EHPAD IA ». Il montre ce que l'IA change dans chaque service et vend une offre (portail IA, formations, accompagnement) sous la marque **EHPADIA**.
+Le site met en scène un **groupe d'EHPAD privé fictif, le Groupe EPHADIA** (12 résidences et un siège). On n'écrit plus « Groupe 00 », « EHPAD IA » ni « EHPADIA ». Il montre ce que l'IA change dans chaque service et vend une offre (portail IA, formations, accompagnement) sous la marque **EPHADIA**.
 
 - Dépôt : `jum33/ephad`, branche `main`.
-- Hébergement : Netlify (`node build.mjs`, publication de `dist/`).
+- Site : https://www.ephadia.fr, hébergé chez OVH (mutualisé Apache).
 
 ## 1. Règles absolues
 
 1. **Projet distinct de Quarkley.** Ne jamais citer Quarkley, Superfasttt, SPIN, SDIS ou pompiers, ni reprendre un texte du site quarkley.com. Si la demande est ambiguë, demander de quel site il s'agit avant d'agir. Seule exception : l'éditeur du site, **specialisteinternet.fr**, figure dans les mentions légales via `{{EDITEUR_NOM}}`, et nulle part ailleurs.
 2. **La marque n'est écrite qu'à un seul endroit** : `site.config.json`. Dans les pages, utiliser les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{GROUPE_SLOGAN}}`, `{{EMAIL}}`, `{{DOMAINE}}`, `{{EDITEUR_NOM}}`, `{{EDITEUR_ADRESSE}}`, `{{EDITEUR_SIRET}}`, `{{DIRECTEUR_PUBLICATION}}`, `{{HEBERGEUR}}` (hébergeur du site, OVH, distinct de l'hébergeur HDS des données de santé).
-3. Le sigle s'écrit **EHPAD**, jamais « EPHAD ». La marque s'écrit donc **EHPADIA**, y compris quand la demande dit « EPHADIA ». Le nom du dépôt, `ephad`, est historique et ne doit pas être recopié dans le contenu.
+3. Dans les textes, le sigle s'écrit **EHPAD**, jamais « EPHAD ». Seule la marque s'écrit **EPHADIA**, comme le domaine ephadia.fr : ce n'est pas une faute à corriger. Le nom du dépôt, `ephad`, est historique et ne doit pas être recopié dans le contenu.
 4. **Tout est fictif** : personnages, résidences, chiffres. Toujours écrire « chiffres donnés à titre d'exemple ».
-5. Ne pas exposer l'e-mail personnel de Jean-Marc dans le site sans son accord explicite.
+5. L'e-mail de contact (`EMAIL` dans `site.config.json`) reçoit les demandes du formulaire. Ne pas l'écrire en dur ni en ajouter un autre sans l'accord de Jean-Marc.
 
 ## 2. Ton et formulation
 
@@ -101,7 +101,7 @@ Champs d'une actualité : `{d: "date en toutes lettres", id: id du service lié,
 - **Ajouter une page** : créer `src/pages/nom.html` à partir d'une page existante (bloc meta, `<!--#head-->`, `<!--#header-->`, `<main id="contenu">`, `<!--#footer-->`), puis ajouter le lien dans `header.html` et/ou `footer.html`. URL sans `.html`.
 - **Ajouter une formation** : tableaux `F` (avec `pub` : `tous`, `referents`, `direction` ou `metiers`) ou `A` dans `site.js`.
 - **Changer la marque** : modifier `site.config.json`, régénérer, et vérifier qu'aucune page ne contient l'ancien nom (`grep -ri "ancien nom" dist`).
-- **Renommer le groupe fictif** : clé `GROUPE` du même fichier (valeur actuelle : « Groupe EHPADIA »).
+- **Renommer le groupe fictif** : clé `GROUPE` du même fichier (valeur actuelle : « Groupe EPHADIA »).
 
 ## 7. Vérifier avant de livrer
 
@@ -115,5 +115,6 @@ Champs d'une actualité : `{d: "date en toutes lettres", id: id du service lié,
 - Le fichier `CLAUDE.md` du dépôt fait foi : en cas d'écart avec cette compétence, suivre `CLAUDE.md` et signaler l'écart.
 - Commit en français, court et descriptif, poussé sur `jum33/ephad`. Créer une branche et une pull request quand Jean-Marc veut relire avant publication, sinon pousser sur `main` s'il le demande.
 - Ne jamais versionner `dist/`.
-- Netlify redéploie automatiquement après chaque push sur `main`.
+- Publication chez OVH (pas de déploiement automatique) : `node build.mjs`, puis envoyer **le contenu** de `dist/`, fichier caché `.htaccess` compris, dans le dossier `www/` par FTP. `.htaccess` sert les URL sans `.html`, la page 404 et force le HTTPS.
+- Le formulaire de contact passe par `public/contact.php`, qui envoie la demande à `{{EMAIL}}` avec la fonction `mail()` d'OVH, depuis une adresse `no-reply@` du domaine. Aucune donnée n'est stockée sur le serveur.
 - Hors GitHub : livrer une archive zip du dépôt (`git archive -o site.zip HEAD`).

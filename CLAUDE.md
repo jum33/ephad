@@ -1,6 +1,6 @@
-# Projet « Groupe EHPADIA » : site vitrine IA pour les groupes d'EHPAD privés
+# Projet « Groupe EPHADIA » : site vitrine IA pour les groupes d'EHPAD privés
 
-Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés**. Le site met en scène un groupe fictif, le **Groupe EHPADIA** (12 résidences et un siège), pour montrer ce que l'IA change dans chaque service.
+Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés**. Le site met en scène un groupe fictif, le **Groupe EPHADIA** (12 résidences et un siège), pour montrer ce que l'IA change dans chaque service.
 
 ## Règle n° 1 : projet distinct de Quarkley
 
@@ -12,9 +12,9 @@ Ce dépôt est le site vitrine d'une **offre IA pour les groupes d'EHPAD privés
 
 ## Marque
 
-- La marque est **EHPADIA** (elle remplace le nom de travail « EHPAD IA »).
+- La marque est **EPHADIA** (domaine ephadia.fr). Elle remplace le nom de travail « EHPAD IA ».
 - Le nom de marque, le domaine, l'e-mail et les mentions de l'éditeur sont définis **uniquement** dans `site.config.json`. Ne jamais les écrire en dur dans une page : utiliser les jetons `{{MARQUE}}`, `{{GROUPE}}`, `{{EMAIL}}`, etc.
-- Le sigle s'écrit **EHPAD** (et non « EPHAD »). La marque s'écrit donc **EHPADIA** (et non « EPHADIA »). On n'écrit plus « Groupe 00 ».
+- Le sigle s'écrit **EHPAD** dans les textes (et non « EPHAD »). Seule la marque, **EPHADIA**, s'écrit ainsi, comme le domaine ephadia.fr. On n'écrit plus « Groupe 00 » ni « EHPADIA ».
 
 ## Cible et ton
 
@@ -69,4 +69,4 @@ Calcul du temps rendu, pour chaque service : `effectif × occurrences par an × 
 
 ## Déploiement
 
-Netlify : `netlify.toml` lance `node build.mjs` et publie `dist/`. Le formulaire de contact passe par Netlify Forms (`name="contact"`). Ne jamais versionner `dist/`.
+OVH (hébergement mutualisé Apache), domaine **ephadia.fr** : lancer `node build.mjs`, puis envoyer **le contenu** de `dist/` (fichier caché `.htaccess` compris) dans le dossier `www/` par FTP. `.htaccess` sert les URL sans `.html`, la page 404 et force le HTTPS. Le formulaire de contact passe par `contact.php`, qui envoie la demande à `{{EMAIL}}` avec la fonction `mail()` d'OVH. Ne jamais versionner `dist/`.

@@ -1,11 +1,11 @@
 # Site vitrine « groupe d'EHPAD à l'ère de l'IA »
 
-Démonstrateur d'un **groupe d'EHPAD privé fictif (Groupe EHPADIA)** qui montre ce que l'IA change au siège et dans chaque résidence.
+Démonstrateur d'un **groupe d'EHPAD privé fictif (Groupe EPHADIA)** qui montre ce que l'IA change au siège et dans chaque résidence.
 Le site présente un organigramme interactif avec calcul du temps rendu, un quiz, une École IA et un espace direction. Les règles du projet sont dans `CLAUDE.md`.
 
 ## Nom de marque provisoire
 
-La marque, **EHPADIA**, est définie **à un seul endroit** : `site.config.json` (clé `MARQUE`).
+La marque, **EPHADIA** (site ephadia.fr), est définie **à un seul endroit** : `site.config.json` (clé `MARQUE`).
 Le domaine, l'e-mail de contact et les mentions de l'éditeur y sont aussi, avec des valeurs à compléter.
 
 ## Arborescence
@@ -38,4 +38,4 @@ Les équivalents temps plein sont calculés sur 1 607 h/an. Tous les chiffres so
 
 ## Déploiement
 
-Netlify : `netlify.toml` lance `node build.mjs` et publie `dist/`. Le formulaire de contact utilise Netlify Forms.
+OVH (hébergement mutualisé Apache), domaine **ephadia.fr** : lancer `node build.mjs`, puis envoyer **le contenu** de `dist/` (fichier caché `.htaccess` compris) dans le dossier `www/` par FTP. `.htaccess` sert les URL sans `.html`, la page 404 et force le HTTPS. Le formulaire de contact passe par `contact.php`, qui envoie la demande à `{{EMAIL}}` avec la fonction `mail()` d'OVH. Ne jamais versionner `dist/`.
