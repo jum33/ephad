@@ -63,4 +63,4 @@ Calcul du temps rendu, pour chaque service : `effectif × occurrences par an × 
 
 ## Déploiement
 
-Netlify : `netlify.toml` lance `node build.mjs` et publie `dist/`. Le formulaire de contact passe par Netlify Forms (`name="contact"`). Ne jamais versionner `dist/`.
+OVH (hébergement mutualisé Apache) : lancer `node build.mjs`, puis envoyer **le contenu** de `dist/` (fichier caché `.htaccess` compris) dans le dossier `www/` par FTP. `.htaccess` sert les URL sans `.html`, la page 404 et force le HTTPS. Le formulaire de contact passe par `contact.php`, qui envoie la demande à `{{EMAIL}}` avec la fonction `mail()` d'OVH. Ne jamais versionner `dist/`.

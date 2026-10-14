@@ -246,7 +246,7 @@ if (form) {
     if (!form.reportValidity()) return;
     const bt = form.querySelector('button[type="submit"]'), label = bt.textContent;
     bt.disabled = true; bt.textContent = "Envoi en cours…";
-    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    fetch("/contact.php", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(new FormData(form)).toString() })
       .then(r => { if (!r.ok) throw new Error(r.status); $("ok").hidden = false; $("ko").hidden = true; form.reset(); sel.clear(); syncSel(); })
       .catch(() => { $("ko").hidden = false; })

@@ -66,7 +66,7 @@ function copyDir(from, to) {
   for (const f of fs.readdirSync(from, { withFileTypes: true })) {
     const a = path.join(from, f.name), b = path.join(to, f.name);
     if (f.isDirectory()) copyDir(a, b);
-    else if (/\.(js|css|txt|xml|svg|toml|webmanifest)$/.test(f.name) || f.name === "_redirects") fs.writeFileSync(b, tokens(fs.readFileSync(a, "utf8")));
+    else if (/\.(js|css|txt|xml|svg|php|webmanifest|htaccess)$/.test(f.name)) fs.writeFileSync(b, tokens(fs.readFileSync(a, "utf8")));
     else fs.copyFileSync(a, b);
   }
 }
